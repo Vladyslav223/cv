@@ -5,7 +5,7 @@ import './index.scss';
 const Header = () => (
   <header className="header">
     <h1 className="header__h1">Cocktails DB</h1>
-    <img src="logo.png" className="header__logo" alt="logo" />
+    <img src="img.jpg" className="header__logo" alt="logo" />
   </header>
 );
 
