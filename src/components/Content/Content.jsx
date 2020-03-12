@@ -1,139 +1,96 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import { createMuiTheme } from '@material-ui/core/styles';
-import { AppBar } from '@material-ui/core';
-
 
 import mainPhoto from './photo1.jpg';
+import phone from './icons/phone.png';
+import email from './icons/email.png';
+import telegram from './icons/telegram.png';
+import home from './icons/home.png';
 import './index.scss';
 
-const theme = createMuiTheme ({
-  spacing: 4,
-});
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',  
-    padding: '80px 0 0',  
-    '& > *': {
-      margin: theme.spacing(1),
-      width: 800,
-      height: 1100,
-    },
-  },
-
-  resume: {
-    margin: "auto",    
-  },
-
-  Box: {
-    height: 100,
-    width: "auto",         
-  },
-
-  Paper: {
-    position: "relative",
-  },
-
-  absoluterow: {
-    position: 'absolute',
-    top: 292,
-    left: 'auto',
-    right: 0,
-    display: "flex",
-    height: 77,
-    width: "100%",
-    padding:" 10px 0 0",
-    backgroundColor: "rgba(192, 167, 40, 0.71)",
-  },
-
-  main_photo: {
-    background: `url(${mainPhoto})`,
-    backgroundSize: "148%",
-    backgroundPosition: "-84px -20px",
-    height: "400px",
-  },
-
-  frontEnd: {
-    background: "rgb(108,101,101)",
-    background: `url(${mainPhoto})`,
-    textAlign: "left",
-    height: "17px",
-    padding: "7px",
-    fontSize: "14px",
-    color: "#d2c166",
-    backgroundPosition: "-36px -88px",
-    backgroundSize: "1118px",
-    backgroundRepeat: "no-repeat",
-    
-  },
-
-  firstName: {
-    textAlign: "left",
-  },
-
-  BoxBanner: {
-    textAlign: "left",
-    color: "white",
-    fontSize: "10px",
-    paddingRight: "15px",
-  }
-
-}));
-
 const Content = (props) => {
-  const classes = useStyles();
 
   return (
-    <div className={classes.root + " " + classes.resume}>
-       <Paper className={classes.Paper} elevation={6}>
-        <Grid container spacing={0}>
-          <Grid item xs={12} sm={4}>
-            <Box className={classes.Box + " " + classes.main_photo}></Box>
-          </Grid>
+    <div class="cv">
+      <div class="cv__grid-wrapper">
+        <div class="cv__main-photo"></div>
+        <div class="cv__main-info">
+          <h2 class="cv__name">Presniakov <br /> Vladyslav</h2>
+          <div class="cv__status">Frontend developer</div>
+          <div class="cv__address">Kharkiv, Ukraine Lorem ipsum dolor sit 192/33</div>
+        </div>
+        <div class="cv__main-row">
+          <div class="cv__profile-title">Professional <br />Profile</div>
+          <div class="cv__profile-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        </div>
+        <div class="cv__contacts-wrap">
+						<h3>Contact</h3>
+						<ul class="cv__contacts">
+							<li class="cv__contactme"><div className="cv__text-contact"><span className="cv__contact-styles">Phone</span><br/> +38(099)11-77-5-77</div><div className="cv__icon-border cv__icon-border1"><img src={phone} alt="contact"></img></div></li>
+							<li class="cv__contactme"><div className="cv__text-contact"><span className="cv__contact-styles">Email</span><br/>presnyakov.vladyslav@gmail.com</div><div className="cv__icon-border cv__icon-border2"><img src={email} alt="contact"></img></div></li>
+							<li class="cv__contactme"><div className="cv__text-contact"><a className="cv__telegram-link" href="tg://resolve?domain=Vladyslav_dev"><span className="cv__contact-styles">Telegram</span><br/>Or write here</a></div><div className="cv__icon-border cv__icon-border3"><img src={telegram} alt="contact"></img></div></li>
+							<li class="cv__contactme"><div className="cv__text-contact"><span className="cv__contact-styles">Address</span><br/>Kharkiv, Ukraine Lorem ipsum dolor sit 192/33</div><div className="cv__icon-border cv__icon-border4"><img src={home} alt="contact"></img></div></li>
+						</ul>
+					</div>
+        <div class="cv__exp">
+          <h3 class="cv__exp-pe-title">Professional experience</h3>
+          <p class="cv__exp-pe-description">Six month of experience in frontend development (React/Redux/HTML/CSS/JS/WordPress)</p>
+          <h3>Professional skillset</h3>
+          <div class="cv__skilset">
+            <p class="skill">HTML:
+            <span class="item">
+                HTML5 Pixel Perfect development, Bootstrap 4
+            </span>
+            </p>
+            <p class="skill">CSS:
+            <span class="item">
+                Responsive Web Design, Sass, BEM, CSS animation, FlexBox, Grid, Cross-Browser compatibility knowledge, Semantic UI Animate.css
+            </span>
+            </p>
+            <p class="skill">Linters:
+            <span class="item">
+                Stylelint
+            </span>
+            </p>
+            <p class="skill">Images:
+            <span class="item">
+                SVG, icon fonts, FontAwesome
+            </span>
+            </p>
+            <p class="skill">JS:
+            <span class="item">
+                JS native, React, Redux, JSON
+            </span>
+            </p>
+            <p class="skill">PSD to HTML:
+            <span class="item">
+                Photoshop, Figma
+            </span>
+            </p>
+            <p class="skill">Version control:
+            <span class="item">
+                Git Version Control Tool
+            </span>
+            </p>
+            <p class="skill">CMS:
+            <span class="item">
+                WordPress
+            </span>
+            </p>
+          </div>
 
-          <Grid item  sm={1} >
-            <Box className={classes.Box} display="none"></Box>
-          </Grid>
-
-          <Grid item xs={12} sm={7}>
-            <Box className={classes.Box}>
-              <h1 className={classes.firstName} variant="h1">Presniakov <br/> Vladyslav</h1>
-              <Box className={classes.Box + " " + classes.frontEnd}>FRONTEND DEVELOPER</Box>
-              <h2 variant="h2">Hharkiv, Ukraine</h2>
-            </Box>
-          </Grid>
-         
-            <Grid item xs={12} sm={12} className={classes.absoluterow}>
-              <Grid item xs={12} sm={4}>
-                <Box className={classes.Box} item sm={1} >PROFESSIONAL<br/>---PROFILE</Box>
-              </Grid>
-
-             <Grid item  sm={1} >
-                <Box className={classes.Box} display="none"></Box>
-              </Grid>
-
-              <Grid item xs={12} sm={7}>
-                <Box className={classes.BoxBanner}>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                   
-                </Box>
-              </Grid>
-            </Grid>          
-        </Grid>
-       </Paper>
+        </div>
+      </div>
     </div>
   );
 };
 
 Content.propTypes = {
-  };
+};
 
 export default Content;
