@@ -14,9 +14,12 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <Header />
-      <div className="flex-wrap">        
+      <div className="flex-wrap">
+        <div className="pen"></div>        
+        <div className="cup"></div>
+        <div className="flower"></div>
         <Content />
+
       </div>
     </div>
   );

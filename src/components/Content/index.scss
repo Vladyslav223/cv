@@ -1,25 +1,51 @@
 .flex-wrap {
-    background-color: #99b7d6;
+    background: url('fon.jpg');
     min-height: 100vh;
-    padding: 130px 0 0 230px;
+    display: flex;
+    padding: 60px 0 0 230px;
+    position: relative;
 }
 
-@font-face { 
-    font-family: 'ROBO'; 
-    src: url('../../fonts/font.ttf')  format('truetype');
-    font-weight: normal; 
-    font-style: normal; 
+.pen {
+    background: url('pen.png');
+    width: 66px;
+    height: 512px;
+    background-size: 66%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 129px;
+    top: 110px;
   }
+  
+.cup {
+    background: url('cup.png');
+    width: 179px;
+    height: 211px;
+    position: absolute;
+    left: 946px;
+    top: 64px;
+}
+
+.flower {
+    background: url('flower.png');
+    width: 411px;
+    height: 489px;
+    position: absolute;
+    left: 747px;
+    top: 510px;
+}
 
 .cv {
     position: relative;
-    width: 800px;
-    height: 1100px;
+    width: 690px;
+    height: 812px;
     background-color: white;
+    box-shadow: 36px 36px 82px 1px rgba(0,0,0,0.49);
+        border-radius: 1px;
 
     &__grid-wrapper {
         display: grid;
-        grid-template-columns: 2fr 6fr;
+        grid-template-columns: 200px 6fr;
     }
 
     &__main-photo {
@@ -31,6 +57,7 @@
 
     &__contactme {
         position: relative;
+        margin-top: 4px;
         & img {
             height: 15px;
             position: relative;
@@ -42,24 +69,53 @@
     }
     &__text-contact {
         position: absolute;
-        top: 20px;
-        right: 50px;
-        font-size: 0.7em;
+        top: 12px;
+        right: 42px;
+        font-size: 9px;
+        letter-spacing: 0.7px;
     }
-
+    
     &__contact-styles {
-        font-weight: bold;
         margin-bottom: -8px;
         display: block;
+        font-size: 11px;
+        text-transform: uppercase;
     }
+    &__contacts {
+        padding-left: 16px;
+    }
+    &__education {
+        margin-top: -249px;
+        background: #6a6a6b;
+        color: white;
+        height: 260px;
+    }
+
+    &__education-title {
+        font-size: 12px;
+        letter-spacing: 1.4px;
+        background: #d8ba43;
+        color: #3d4047;
+        font-weight: bold;
+        margin: 0;
+        padding: 11px 22px;
+        text-transform: uppercase;
+        text-align: right;
+    }
+
 
     &__icon-border {
         border: 1px solid;
         border-radius: 50px;
         width: 24px;
         height: 24px;
-        margin-top: 23px;
+        margin-top: 13px;
         display: inline-block;
+        cursor: pointer;
+    }
+    
+    &__home-link {
+        color: white;        
     }
 
     &__icon-border1 {
@@ -103,7 +159,7 @@
     }
 
     &__status {
-        background: rgb(108,101,101);    
+        background: #40413c;    
         text-align: left;
         height: 17px;
         padding: 7px;
@@ -117,17 +173,19 @@
 
     &__name {
         text-align: left;
-        font-family: 'ROBO';
+        font-family: 'Russell';
         letter-spacing: 1px;
+        margin: 44px 0 5px;
+        text-transform: uppercase;
     }
 
     &__address {
-        font-style: italic;
-        font-size: 13px;
+        font-size: 10px;
         text-align: left;
         color: #383838;
-        padding-top: 10px;
+        padding: 10px 0 0 2px;
         text-align: left;
+        font-weight: bold;
         font-style: italic;
     }
 
@@ -138,18 +196,24 @@
     &__main-decription {
 
     }
+    
+    &__square {
+        width: 47px;
+        height: 10px;
+    }
     &__main-info {
         padding-left: 50px;
     }
     &__contacts-wrap {
-        height: 312px;
-        background: #4a4a55;
-        color: white;
-        padding: 30px 30px 0 0;
+        height: 252px;
+        background: #41414a;
+        color: white;       
+        padding: 9px 21px 0 0;
+        position: relative;
         
         & h3 {
             text-transform: uppercase;
-            font-size: 17px;
+            font-size: 15px;
             color: #cab200;
             border-bottom: 2px solid #cab200;
             padding-bottom: 4px;
@@ -157,33 +221,54 @@
             text-align: right;
         }
     }
-    
-    &__main-row {
-        grid-column: 1 / 4;
-        display: grid;
-        grid-template-columns: 4fr 7fr;
+
+    &__accent-yellow {
+        width: 27px;
+        height: 4px;
+        background-color: #cab200;
         position: absolute;
-        top: 194px;
+        right: 21px;
+        top: 28px;
+    }
+
+    &__accent-gray {
+        width: 122px;
+        height: 4px;
+        background-color: #828282;
+        position: absolute;
+        left: 52px;
+        top: 29px;
+    }
+    
+    &__accent-gray2 {
+        top: 111px;
+    }
+    &__main-row {
+        display: grid;
+        grid-template-columns: 200px 6fr;
+        position: absolute;
+        top: 184px;
         left: auto;
         right: 0;
         height: 88px;
         width: 100%;
         padding: 10px 0 0;
-        background-color: #ab8803b0;
+        
 
     }
 
     &__profile-title {
-        padding-top: 8px;
-        padding-right: 37px;
-        padding-right: 110px;
-        font-weight: bold;
-        font-size: 13px;
+        padding-top: 4px;
+        padding-right: 20px;
+        font-size: 14px;
         letter-spacing: 1.9px;
         line-height: 22px;
         color: white;
         text-align: right;
         text-transform: uppercase;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        background-color: #a98500b8;
     }
 
     &__profile-description {
@@ -192,6 +277,95 @@
         font-size: 10px;
         line-height: 18px;
         letter-spacing: 1.3px;
+        padding: 4px 6px 4px 50px;
+        background: #c5ad4d;
+    }
+
+    &__exp {
+        position: relative;
+    }
+
+    &__exp-pe-description {
+        font-size: 11px;
+        height: 17px;
+        margin: 0 0 0 77px;
+        padding-bottom: 6px;
+        text-align: left;
+    }
+
+    &__exp-pe-title {
+        margin: 24px 0 15px 52px;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+        padding: 4px 0 5px;
+        color: #41414a;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        border-bottom: 2px solid #80808091;
+    }
+
+    &__exp-pe-title-1 {
+        padding-bottom: 10px;
+        margin-top: 15px;
+    }
+
+
+    &__skillset {
+        font-size: 12px;
+        text-align: left;
+        margin-left: 174px;
+        border-left: 2px solid #cecece;
+    }
+
+    &__item-wrap {
+        line-height: 23px;  
+        position: relative; 
+        left: -98px;   
+    }
+
+    &__skill {
+        display: flex;
+        text-align: left;
+        padding: 0 20px 0 100px;
+        font-size: 11px;
+        align-items: baseline;
+    }
+
+    &__item {
+        font-weight: bold;   
+        font-size: 12px;     
+        position: absolute;
+        width: 98px;
+        border-bottom: 2px solid #cecece;
+    }
+
+    &__hr {
+        width: 213px;
+        background-color: #cecece;
+        border: none;
+        color: #cecece;
+        background-color: #cecece;
+        height: 2px;
+        position: absolute;
+        left: 97px;
+        bottom: -8px;
+    }
+
+
+    &__vuz {
+        display: block;
+        padding: 12px 20px 0;
+        font-size: 9px;
+        text-align: right;
+        letter-spacing: 0.67px;
+        & span {
+            margin-bottom: -4px;
+            letter-spacing: 1px;
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+        }       
     }
   
 }
